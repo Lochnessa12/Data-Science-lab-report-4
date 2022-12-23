@@ -19,7 +19,7 @@ x<-SC$salt_conc
 plot(x,y1,
      type = "p", 
      col="Green",
-     main="Saltcalibration",
+     main="Standard curves for salt concentration",
      xlab="Saltconcentration [W %]",
      ylab="Intensity [cm^-1]",
      xlim=c(1,20),
@@ -168,7 +168,12 @@ barplot(C_salt_NS,
 #Plotting mean with standard deviations
 abline(h=mean_salt_NS, col="Green", lwd=1.5) #Mean 
 abline(h=mean_salt_NS+standard_d_NS, col="Red", lwd=1.5) #Maximum standard deviation
-abline(h=mean_salt_NS-standard_d_NS, col="Red", lwd=1.5) #Minimum standard deviation
+abline(h=mean_salt_NS-standard_d_NS, col="Red", lty=2, lwd=1.5) #Minimum standard deviation
+
+legend("topright",
+       c("Maximum standart diviation", "Mean", "Minimum standard diviation"),
+       col=c("Red", "Green", "Red"), 
+       lty=c(1,1,2))
 
 #Barplot at the mean salt concentration for 4-US----
 #Creating the mean and the standard deviation for US
@@ -184,7 +189,12 @@ barplot(C_salt_US,
 #Plotting mean with standard deviations
 abline(h=mean_salt_US, col="Green", lwd=1.5) #Mean
 abline(h=mean_salt_US+standard_d_US, col="Red", lwd=1.5) #Maximum standard deviation
-abline(h=mean_salt_US-standard_d_US, col="Red", lwd=1.5) #Minimum standard deviation
+abline(h=mean_salt_US-standard_d_US, col="Red", lty=2, lwd=1.5) #Minimum standard deviation
+
+legend("topright",
+       c("Maximum standart diviation", "Mean", "Minimum standard diviation"),
+       col=c("Red", "Green", "Red"), 
+       lty=c(1,1,2))
 
 #Barplot at the mean salt concentration for 5-HS----
 #Creating the mean and the standard deviation for HS
@@ -200,8 +210,12 @@ barplot(C_salt_HS,
 #Plotting mean with standard deviations
 abline(h=mean_salt_HS, col="Green", lwd=1.5) #Mean 
 abline(h=mean_salt_HS+standard_d_HS, col="Red", lwd=1.5) #Maximum standard deviation
-abline(h=mean_salt_HS-standard_d_HS, col="Red", lwd=1.5) #Minimum standard deviation
+abline(h=mean_salt_HS-standard_d_HS, col="Red", lty=2, lwd=1.5) #Minimum standard deviation
 
+legend("topright",
+       c("Maximum standart diviation", "Mean", "Minimum standard diviation"),
+       col=c("Red", "Green", "Red"), 
+       lty=c(1,1,2))
 
 #Trying boxplots instead of barplots ----
 boxplot(C_salt_NS,
@@ -232,7 +246,12 @@ barplot(C_salt_NS,
 #Plotting weighted mean with standard deviations
 abline(h=WM_NS, col="Green", lwd=1.5) #Weighted mean 
 abline(h=WM_NS+standard_d_NS, col="Red", lwd=1.5) #Maximum #standard deviation
-abline(h=WM_NS-standard_d_NS, col="Red", lwd=1.5) #Minimum #standard deviation
+abline(h=WM_NS-standard_d_NS, col="Red", lty=2, lwd=1.5) #Minimum #standard deviation
+
+legend("topright",
+       c("Maximum standart diviation", "Weighted mean", "Minimum standard diviation"),
+       col=c("Red", "Green", "Red"), 
+       lty=c(1,1,2))
 
 #Barplot for weighted mean 4-US ----
 #Loading weighted mean
@@ -247,7 +266,12 @@ barplot(C_salt_US,
 #Plotting weighted mean with standard deviations
 abline(h=WM_US, col="Green", lwd=1.5) #Weighted mean 
 abline(h=WM_US+standard_d_US, col="Red", lwd=1.5) #Maximum #standard deviation
-abline(h=WM_US-standard_d_US, col="Red", lwd=1.5) #Minimum #standard deviation
+abline(h=WM_US-standard_d_US, col="Red", lty=2, lwd=1.5) #Minimum #standard deviation
+
+legend("topright",
+       c("Maximum standart diviation", "Weighted mean", "Minimum standard diviation"),
+       col=c("Red", "Green", "Red"), 
+       lty=c(1,1,2))
 
 #Barplot for weighted mean 5-HS ----
 #Loading weighted mean
@@ -262,7 +286,12 @@ barplot(C_salt_HS,
 #Plotting weighted mean with standard deviations
 abline(h=WM_HS, col="Green", lwd=1.5) #Weighted mean 
 abline(h=WM_HS+standard_d_HS, col="Red", lwd=1.5) #Maximum #standard deviation
-abline(h=WM_HS-standard_d_HS, col="Red", lwd=1.5) #Minimum #standard deviation
+abline(h=WM_HS-standard_d_HS, col="Red", lty=2, lwd=1.5) #Minimum #standard deviation
+
+legend("topright",
+       c("Maximum standart diviation", "Weighted mean", "Minimum standard diviation"),
+       col=c("Red", "Green", "Red"), 
+       lty=c(1,1,2))
 
 #Creating histograms for 1-NS ----
 #Histogram with 10 bins
@@ -341,7 +370,13 @@ barplot(NS$droplet_area_um2,
 #Plotting mean with standard deviations
 abline(h=mean_droplet_NS, col="green", lwd=1.5) #Mean
 abline(h=mean_droplet_NS+sd_NS, col="Red", lwd=1.5) #Maximum #standard deviation
-abline(h=mean_droplet_NS-sd_NS, col="Red", lwd=1.5) #Minimum #standard deviation
+abline(h=mean_droplet_NS-sd_NS, col="Red", lty=2, lwd=1.5) #Minimum #standard deviation
+
+legend("topright",
+       c("Maximum standart diviation", "Mean", "Minimum standard diviation"),
+       col=c("Red", "Green", "Red"), 
+       lty=c(1,1,2))
+
 
 #Making a barplot for the dropletsize of US
 barplot(US$droplet_area_um2,
@@ -352,7 +387,12 @@ barplot(US$droplet_area_um2,
 #Plotting mean with standard deviations
 abline(h=mean_droplet_US, col="green", lwd=1.5) #Mean
 abline(h=mean_droplet_US+sd_US, col="Red", lwd=1.5) #Maximum #standard deviation
-abline(h=mean_droplet_US-sd_US, col="Red", lwd=1.5) #Minimum #standard deviation
+abline(h=mean_droplet_US-sd_US, col="Red", lty=2, lwd=1.5) #Minimum #standard deviation
+
+legend("topright",
+       c("Maximum standart diviation", "Mean", "Minimum standard diviation"),
+       col=c("Red", "Green", "Red"), 
+       lty=c(1,1,2))
 
 #Making a barplot for the dropletsize of HS
 barplot(HS$droplet_area_um2,
@@ -363,7 +403,12 @@ barplot(HS$droplet_area_um2,
 #Plotting mean with standard deviations
 abline(h=mean_droplet_HS, col="green", lwd=1.5) #Mean
 abline(h=mean_droplet_HS+sd_HS, col="Red", lwd=1.5) #Maximum #standard deviation
-abline(h=mean_droplet_HS-sd_HS, col="Red", lwd=1.5) #Minimum #standard deviation
+abline(h=mean_droplet_HS-sd_HS, col="Red", lty=2, lwd=1.5) #Minimum #standard deviation
+
+legend("topright",
+       c("Maximum standart diviation", "Mean", "Minimum standard diviation"),
+       col=c("Red", "Green", "Red"), 
+       lty=c(1,1,2))
 
 #Plot of size distribution ----
 #Creating a plot for each of the droplet sizes
